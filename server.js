@@ -70,7 +70,7 @@ app.post('/assign/', async (req,res) =>{
     }
 })
 
-app.patch('/assign/:membername', async (req,res) =>{
+app.put('/assign/:membername', async (req,res) =>{
     if (req.body){
         if(req.params.membername){
             const data = await edit_data(client,req.body,req.params.membername)
