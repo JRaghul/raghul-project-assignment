@@ -49,7 +49,7 @@ async function delete_data_with_name(client, params) {
 const port = process.env.PORT || 9998
 
 app.listen(port, async () => {
-    console.log('http://localhost:'+port'/')
+    console.log('http://localhost:'+port+'/')
 })
 
 app.get('/assign/:membername?', async (req,res) =>{
