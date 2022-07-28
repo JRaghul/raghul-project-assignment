@@ -18,7 +18,7 @@ async function get_all_data(client) {
 
 async function get_data_with_name(client, params) {
     console.log(params)
-    const data = await client.db('fundmanage').collection('assign').find({fund_name:params}).toArray()
+    const data = await client.db('fundmanage').collection('assign').find({member_name:params}).toArray()
     console.log("data :", data)
     return data
 }
@@ -31,7 +31,7 @@ async function post_data(client,data) {
 
 async function edit_data(client,data,param) {
     console.log(param)
-    await client.db('fundmanage').collection('assign').replaceOne({fund_name:param},{
+    await client.db('fundmanage').collection('assign').replaceOne({member_name:param},{
         member_name:data.member_name,
         fund_name:data.fund_name,
         assign_date:data.assign_date,
@@ -41,7 +41,7 @@ async function edit_data(client,data,param) {
 
 async function delete_data_with_name(client, params) {
     console.log(" inside delete with name data")
-    await client.db('fundmanage').collection('assign').findOneAndDelete({ fund_name: params })
+    await client.db('fundmanage').collection('assign').findOneAndDelete({ member_name: params })
     return {
         "opration deletion": "sucess"
     }
@@ -49,7 +49,7 @@ async function delete_data_with_name(client, params) {
 const port = process.env.PORT || 9998
 
 app.listen(port, async () => {
-    console.log('http://localhost:9998/')
+    console.log('http://localhost:'+port'/')
 })
 
 app.get('/assign/:membername?', async (req,res) =>{
