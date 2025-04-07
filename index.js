@@ -23,12 +23,12 @@ employee.skills.pop("Node.js");
 delete employee.department;
 //console.log(employee);
 
-let student = {
-    name: "Raghul",
-    age: 24,
-    marks: [85, 90, 78] // Existing marks
-};
+// let student = {
+//     name: "Raghul",
+//     age: 24,
+//     marks: [85, 90, 78] // Existing marks
+// };
 
-student.marks.push(88);
-student.marks.values(100)
-console.log(student);
+// student.marks.push(88);
+// student.marks.values(100)
+// console.log(student);
