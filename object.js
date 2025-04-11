@@ -24,6 +24,7 @@ products.push({ id: 4, name: "Monitor", price: 7000, quantity: 8 })
 
   }
 
+  
 
 
 

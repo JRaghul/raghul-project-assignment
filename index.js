@@ -32,3 +32,7 @@ delete employee.department;
 // student.marks.push(88);
 // student.marks.values(100)
 // console.log(student);
+
+
+
+
